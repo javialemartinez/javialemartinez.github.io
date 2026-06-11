@@ -82,6 +82,18 @@
     .about-grid { grid-template-columns: 1fr; }
     .project-card { padding: 24px; }
   }
+
+  .diagrams-note { font-size: 13px; color: var(--text-dim); font-style: italic; margin: 20px 0 16px; padding: 10px 14px; border-left: 2px solid var(--teal-dim); background: rgba(29,106,114,0.06); border-radius: 0 6px 6px 0; }
+  .diagrams-grid { display: flex; flex-direction: column; gap: 16px; margin-top: 8px; }
+  .diagram-item { }
+  .diagram-label { font-size: 12px; font-weight: 500; color: var(--teal); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 8px; }
+  .diagram-img { width: 100%; border-radius: 8px; border: 1px solid var(--border); cursor: pointer; transition: border-color 0.2s; }
+  .diagram-img:hover { border-color: var(--teal-dim); }
+  .lightbox { display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.92); z-index: 1000; align-items: center; justify-content: center; padding: 24px; }
+  .lightbox.active { display: flex; }
+  .lightbox img { max-width: 95vw; max-height: 90vh; border-radius: 8px; object-fit: contain; }
+  .lightbox-close { position: fixed; top: 20px; right: 28px; font-size: 32px; color: white; cursor: pointer; line-height: 1; opacity: 0.7; }
+  .lightbox-close:hover { opacity: 1; }
 </style>
 </head>
 <body>
@@ -171,6 +183,21 @@
       <div class="project-stack">
         <span class="stack-tag">React</span><span class="stack-tag">Node.js</span><span class="stack-tag">PostgreSQL</span><span class="stack-tag">Docker</span><span class="stack-tag">Git</span><span class="stack-tag">Claude</span><span class="stack-tag">Google Antigravity</span>
       </div>
+      <div class="diagrams-note">No screenshots for confidentiality reasons — these diagrams show architecture, functionality, and user flow without exposing internal data.</div>
+      <div class="diagrams-grid">
+        <div class="diagram-item">
+          <div class="diagram-label">System Architecture</div>
+          <img src="a3-architecture.png" alt="A3 Platform System Architecture" class="diagram-img">
+        </div>
+        <div class="diagram-item">
+          <div class="diagram-label">Functional Modules</div>
+          <img src="a3-functional.png" alt="A3 Platform Functional Modules" class="diagram-img">
+        </div>
+        <div class="diagram-item">
+          <div class="diagram-label">Problem-Solving Process Flow</div>
+          <img src="a3-process.png" alt="A3 Problem-Solving Process" class="diagram-img">
+        </div>
+      </div>
     </div>
 
     <div class="project-card">
@@ -223,5 +250,25 @@
 
 <footer>© 2026 Javier Alejandro Martinez · Built with AI</footer>
 
+
+<div class="lightbox" id="lightbox" onclick="closeLightbox()">
+  <span class="lightbox-close">&times;</span>
+  <img id="lightbox-img" src="" alt="">
+</div>
+<script>
+  document.querySelectorAll('.diagram-img').forEach(img => {
+    img.addEventListener('click', function(e) {
+      e.stopPropagation();
+      document.getElementById('lightbox-img').src = this.src;
+      document.getElementById('lightbox').classList.add('active');
+    });
+  });
+  function closeLightbox() {
+    document.getElementById('lightbox').classList.remove('active');
+  }
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') closeLightbox();
+  });
+</script>
 </body>
 </html>
