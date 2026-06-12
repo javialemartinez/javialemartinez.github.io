@@ -37,7 +37,7 @@
   .btn-ghost { padding: 12px 28px; border: 1px solid var(--border); color: var(--text-mid); text-decoration: none; font-size: 14px; border-radius: 6px; transition: all 0.2s; display: inline-block; }
   .btn-ghost:hover { border-color: var(--teal); color: var(--teal); }
   .hero-photo { width: 240px; height: 240px; flex-shrink: 0; border-radius: 50%; border: 2px solid var(--teal-dim); overflow: hidden; box-shadow: 0 0 40px rgba(29,158,117,0.15); }
-  .hero-photo img { width: 100%; height: 100%; object-fit: cover; object-position: center top; }
+  .hero-photo img { width: 100%; height: 100%; object-fit: cover; object-position: center 20%; }
   .section-divider { height: 1px; background: var(--border); max-width: 1100px; margin: 0 auto; }
   section { padding: 80px 48px; max-width: 1100px; margin: 0 auto; }
   .section-label { font-size: 11px; font-weight: 500; letter-spacing: 0.15em; text-transform: uppercase; color: var(--teal); margin-bottom: 12px; display: flex; align-items: center; gap: 10px; }
@@ -89,6 +89,8 @@
   .diagram-label { font-size: 12px; font-weight: 500; color: var(--teal); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 8px; }
   .diagram-img { width: 100%; border-radius: 8px; border: 1px solid var(--border); cursor: pointer; transition: border-color 0.2s; }
   .diagram-img:hover { border-color: var(--teal-dim); }
+  .diagram-caption { font-size: 13px; color: var(--text-mid); line-height: 1.7; margin-top: 10px; }
+
   .lightbox { display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.92); z-index: 1000; align-items: center; justify-content: center; padding: 24px; }
   .lightbox.active { display: flex; }
   .lightbox img { max-width: 95vw; max-height: 90vh; border-radius: 8px; object-fit: contain; }
@@ -153,6 +155,18 @@
       <div class="project-stack">
         <span class="stack-tag">n8n</span><span class="stack-tag">Notion API</span><span class="stack-tag">Instagram API</span><span class="stack-tag">Facebook API</span><span class="stack-tag">TikTok API</span><span class="stack-tag">YouTube API</span><span class="stack-tag">Claude</span>
       </div>
+      <div class="diagrams-grid">
+        <div class="diagram-item">
+          <div class="diagram-label">n8n Automation Flow</div>
+          <img src="n8n-content-pipeline.png" alt="Content publishing automation workflow in n8n" class="diagram-img">
+          <p class="diagram-caption">The full automation: reads pending content from Notion, detects format (Story, Video, Reel, Carousel), routes each to its publishing sub-workflow, and reports results back via Telegram and Notion.</p>
+        </div>
+        <div class="diagram-item">
+          <div class="diagram-label">Content Calendar — Notion</div>
+          <img src="notion-content-calendar.png" alt="Notion content calendar database" class="diagram-img">
+          <p class="diagram-caption">The zero-code interface: content is planned and written directly in Notion as a calendar. n8n reads this database, schedules each post, and updates its status automatically — no other software required.</p>
+        </div>
+      </div>
     </div>
 
     <div class="project-card">
@@ -167,6 +181,13 @@
       </div>
       <div class="project-stack">
         <span class="stack-tag">n8n</span><span class="stack-tag">WhatsApp Business API</span><span class="stack-tag">Claude</span><span class="stack-tag">Docker</span>
+      </div>
+      <div class="diagrams-grid">
+        <div class="diagram-item">
+          <div class="diagram-label">n8n Automation Flow</div>
+          <img src="n8n-whatsapp-leads.png" alt="WhatsApp lead automation workflow in n8n" class="diagram-img">
+          <p class="diagram-caption">Runs on a schedule: reads lead status from Notion, checks for active campaigns and test mode, builds and sends personalized WhatsApp messages or daily reports via Telegram, and updates lead status back in Notion.</p>
+        </div>
       </div>
     </div>
 
@@ -188,14 +209,17 @@
         <div class="diagram-item">
           <div class="diagram-label">System Architecture</div>
           <img src="a3-architecture.png" alt="A3 Platform System Architecture" class="diagram-img">
+          <p class="diagram-caption">How the app is built: a React frontend and Node.js API run in Docker containers, backed by PostgreSQL. Claude acted as the AI development agent throughout, generating and maintaining the codebase.</p>
         </div>
         <div class="diagram-item">
           <div class="diagram-label">Functional Modules</div>
           <img src="a3-functional.png" alt="A3 Platform Functional Modules" class="diagram-img">
+          <p class="diagram-caption">The core modules and how they connect: from problem registration through the A3 workspace, task management, dashboards, notifications, and a knowledge base that accumulates resolved cases for future reuse.</p>
         </div>
         <div class="diagram-item">
           <div class="diagram-label">Problem-Solving Process Flow</div>
           <img src="a3-process.png" alt="A3 Problem-Solving Process" class="diagram-img">
+          <p class="diagram-caption">The 8-step A3 methodology as experienced inside the app — each step shows what the user does and how the system responds, from identifying the problem to standardizing the solution into the knowledge base.</p>
         </div>
       </div>
     </div>
