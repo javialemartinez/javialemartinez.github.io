@@ -50,6 +50,15 @@
   .projects { display: flex; flex-direction: column; gap: 24px; }
   .project-group-label { font-size: 13px; font-weight: 600; color: var(--text-mid); text-transform: uppercase; letter-spacing: 0.08em; margin: 8px 0 -4px; padding-bottom: 8px; border-bottom: 1px solid var(--border); }
   .project-group-label:first-child { margin-top: 0; }
+  .toc { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 10px; margin: 0 0 34px; }
+  .toc-group { grid-column: 1 / -1; font-size: 11px; font-weight: 600; color: var(--text-dim); text-transform: uppercase; letter-spacing: 0.12em; margin-top: 10px; }
+  .toc-group:first-child { margin-top: 0; }
+  .toc-item { display: flex; gap: 11px; align-items: flex-start; padding: 12px 14px; border: 1px solid var(--border); border-radius: 8px; background: rgba(22,30,40,0.5); text-decoration: none; transition: border-color 0.2s, background 0.2s; }
+  .toc-item:hover { border-color: var(--teal-dim); background: rgba(29,158,117,0.06); }
+  .toc-num { flex-shrink: 0; font-size: 11px; font-weight: 600; color: var(--teal); padding-top: 3px; }
+  .toc-title { font-size: 14px; font-weight: 500; color: var(--text); line-height: 1.35; }
+  .toc-meta { font-size: 11px; color: var(--text-dim); margin-top: 3px; line-height: 1.4; }
+  .project-card { scroll-margin-top: 88px; }
   .project-card { background: var(--card-bg); border: 1px solid var(--border); border-radius: 12px; padding: 36px 40px; transition: border-color 0.2s, box-shadow 0.2s; position: relative; overflow: hidden; }
   .project-card::before { content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 3px; background: var(--teal); border-radius: 12px 0 0 12px; opacity: 0; transition: opacity 0.2s; }
   .project-card:hover { border-color: var(--teal-dim); box-shadow: 0 4px 32px rgba(29,158,117,0.08); }
@@ -145,11 +154,59 @@
 <section id="projects">
   <div class="section-label">Selected Work</div>
   <h2>Things I've built with AI</h2>
+
+  <nav class="toc" aria-label="Project index">
+    <div class="toc-group">AI &amp; Automation</div>
+    <a class="toc-item" href="#p-content-automation">
+      <span class="toc-num">01</span>
+      <div>
+        <div class="toc-title">Content Automation Pipeline</div>
+        <div class="toc-meta">Metamorfosis Origen · Live in production</div>
+      </div>
+    </a>
+    <a class="toc-item" href="#p-whatsapp">
+      <span class="toc-num">02</span>
+      <div>
+        <div class="toc-title">WhatsApp Lead Re-engagement</div>
+        <div class="toc-meta">Metamorfosis Origen · Live in production</div>
+      </div>
+    </a>
+    <a class="toc-item" href="#p-android">
+      <span class="toc-num">03</span>
+      <div>
+        <div class="toc-title">Android App</div>
+        <div class="toc-meta">Metamorfosis Origen · Distributed via APK</div>
+      </div>
+    </a>
+    <div class="toc-group">Process &amp; Standards</div>
+    <a class="toc-item" href="#p-a3">
+      <span class="toc-num">04</span>
+      <div>
+        <div class="toc-title">A3 Process Management App</div>
+        <div class="toc-meta">INVAP · Internal pilot</div>
+      </div>
+    </a>
+    <a class="toc-item" href="#p-5s">
+      <span class="toc-num">05</span>
+      <div>
+        <div class="toc-title">5S Lean Management Platform</div>
+        <div class="toc-meta">INVAP · Leading development</div>
+      </div>
+    </a>
+    <a class="toc-item" href="#p-gerencia">
+      <span class="toc-num">06</span>
+      <div>
+        <div class="toc-title">Engineering &amp; Production Management</div>
+        <div class="toc-meta">INVAP · Leading development</div>
+      </div>
+    </a>
+  </nav>
+
   <div class="projects">
 
     <div class="project-group-label">AI &amp; Automation</div>
 
-    <div class="project-card">
+    <div class="project-card" id="p-content-automation">
       <div class="project-header">
         <div class="project-title">Content Automation Pipeline — Metamorfosis Origen</div>
         <span class="project-badge">Live in production</span>
@@ -177,7 +234,7 @@
       </div>
     </div>
 
-    <div class="project-card">
+    <div class="project-card" id="p-whatsapp">
       <div class="project-header">
         <div class="project-title">WhatsApp Lead Re-engagement System</div>
         <span class="project-badge">Live in production</span>
@@ -199,7 +256,7 @@
       </div>
     </div>
 
-    <div class="project-card">
+    <div class="project-card" id="p-android">
       <div class="project-header">
         <div class="project-title">Android App — Metamorfosis Origen</div>
         <span class="project-badge">Distributed via APK</span>
@@ -212,7 +269,7 @@
 
     <div class="project-group-label">Process &amp; Standards</div>
 
-    <div class="project-card">
+    <div class="project-card" id="p-a3">
       <div class="project-header">
         <div class="project-title">A3 Process Management App — INVAP</div>
         <span class="project-badge">Internal · Pilot</span>
@@ -245,7 +302,7 @@
       </div>
     </div>
 
-    <div class="project-card">
+    <div class="project-card" id="p-5s">
       <div class="project-header">
         <div class="project-title">5S Lean Management Platform — INVAP</div>
         <span class="project-badge">Leading development · Team collaboration</span>
@@ -274,7 +331,7 @@
       </div>
     </div>
 
-    <div class="project-card">
+    <div class="project-card" id="p-gerencia">
       <div class="project-header">
         <div class="project-title">Engineering & Production Management Platform — INVAP</div>
         <span class="project-badge">Leading development · Team of 2</span>
