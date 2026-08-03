@@ -47,8 +47,8 @@
 <text class="md" x="428" y="573" text-anchor="middle">structure &amp; positions</text>
 
 <rect x="624" y="510" width="352" height="88" rx="12" fill="#0F1A2A" stroke="#3E5A7A" stroke-width="1.5"/>
-<text class="mt" x="800" y="549" text-anchor="middle">People</text>
-<text class="md" x="800" y="573" text-anchor="middle">assignments &amp; roles</text>
+<text class="mt" x="800" y="549" text-anchor="middle">Human Capabilities</text>
+<text class="md" x="800" y="573" text-anchor="middle">skills, experience, team fit</text>
 
 <rect x="996" y="510" width="352" height="88" rx="12" fill="#0F1A2A" stroke="#3E5A7A" stroke-width="1.5"/>
 <text class="mt" x="1172" y="549" text-anchor="middle">Departments</text>
