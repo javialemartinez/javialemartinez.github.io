@@ -200,6 +200,14 @@
         <div class="toc-meta">INVAP · Leading development</div>
       </div>
     </a>
+    <div class="toc-group">Engineering Platform</div>
+    <a class="toc-item" href="#p-template">
+      <span class="toc-num">07</span>
+      <div>
+        <div class="toc-title">Apps Project Template</div>
+        <div class="toc-meta">INVAP · Starter template &amp; method</div>
+      </div>
+    </a>
   </nav>
 
   <div class="projects">
@@ -356,6 +364,37 @@
           <div class="diagram-label">Functional Flow</div>
           <img src="gerencia-funcional.svg" alt="Engineering Management Platform Functional Flow" class="diagram-img">
           <p class="diagram-caption">From access to insight: incoming data from corporate exports is staged and approved change-by-change before it touches the live org chart, which then drives supplier management, purchase-order tracking, and department dashboards — with every edit scoped to the department that owns the data.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="project-group-label">Engineering Platform</div>
+
+    <div class="project-card" id="p-template">
+      <div class="project-header">
+        <div class="project-title">Apps Project Template — INVAP</div>
+        <span class="project-badge">Internal product · Starter template</span>
+      </div>
+      <p class="project-desc">A starter template (&ldquo;golden path&rdquo;) for new internal applications. It is a monorepo whose skeleton <strong>already runs end to end on day one</strong> — authentication with lockout, RBAC, an append-only audit trail, notifications, admin screens, Docker and CI — so a new project never rebuilds that groundwork and starts directly on its own domain. Authored the baseline skeleton and, alongside it, the <strong>development method</strong>: a two-tier spec-driven approach where the specification (not the code) is the source of truth, giving requirement → code → test traceability. Ships <strong>16 AI skills and 11 specialized agents</strong> that encode the team's standards so the method survives contact with a real project.</p>
+      <div class="project-metrics">
+        <div class="metric"><div class="metric-value">Day one</div><div class="metric-label">Skeleton runs end-to-end</div></div>
+        <div class="metric"><div class="metric-value">27</div><div class="metric-label">AI skills &amp; agents included</div></div>
+        <div class="metric"><div class="metric-value">8</div><div class="metric-label">Base data models ready</div></div>
+      </div>
+      <div class="project-stack">
+        <span class="stack-tag">pnpm monorepo</span><span class="stack-tag">TypeScript</span><span class="stack-tag">React 18</span><span class="stack-tag">Vite</span><span class="stack-tag">Express</span><span class="stack-tag">Prisma</span><span class="stack-tag">PostgreSQL</span><span class="stack-tag">MinIO</span><span class="stack-tag">Zod</span><span class="stack-tag">Docker</span><span class="stack-tag">GitLab CI</span><span class="stack-tag">Playwright</span><span class="stack-tag">Claude</span>
+      </div>
+      <div class="diagrams-note">This template ships no domain and no client data — the diagrams below show the skeleton it provides and the method used to build on top of it.</div>
+      <div class="diagrams-grid">
+        <div class="diagram-item">
+          <div class="diagram-label">System Architecture</div>
+          <img src="template-arquitectura.svg" alt="Apps Project Template System Architecture" class="diagram-img">
+          <p class="diagram-caption">The monorepo: a React/Vite frontend and an Express/Prisma backend sharing one set of Zod schemas, over PostgreSQL and MinIO. Everything shown is already working — auth with lockout, RBAC across 5 roles, an append-only audit trail with chained hashes, notifications and API keys. The domain is deliberately the only empty part.</p>
+        </div>
+        <div class="diagram-item">
+          <div class="diagram-label">Development Method</div>
+          <img src="template-metodologia.svg" alt="Apps Project Template Development Method" class="diagram-img">
+          <p class="diagram-caption">The two-tier method: a strategic map first decomposes the product into capabilities (Epic → Capability → User Story → Scenario) to prove nothing is orphaned, and each capability then runs its own explore → propose → apply → archive cycle. Built on EARS, Specification by Example, User Story Mapping and DDD rather than invented from scratch.</p>
         </div>
       </div>
     </div>
