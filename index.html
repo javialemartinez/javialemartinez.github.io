@@ -145,17 +145,17 @@
     <div class="hero-text">
       <div class="hero-eyebrow">AI Product Manager · Technical PM</div>
       <h1>Javier Alejandro<br><span>Martinez</span></h1>
-      <p class="hero-tagline">Understanding problems before building perfect solutions with AI.</p>
+      <p class="hero-tagline">I turn manual management processes into AI systems.</p>
       <div class="tags">
         <span class="tag">Claude · Antigravity · n8n</span>
         <span class="tag">React · Node.js · Docker</span>
-        <span class="tag">Workflow Automation</span>
+        <span class="tag">RAG · AI Agents · Workflow Automation</span>
         <span class="tag">Open to remote · EU auth in process</span>
       </div>
-      <p class="hero-desc">Technical PM with <strong>11+ years managing complex systems</strong> — satellites, radars, industrial automation. Now I build products with AI agents as core tools, not shortcuts.</p>
+      <p class="hero-desc"><strong>11 years in high-consequence systems</strong> — space, radar, nuclear, manufacturing, energy. Today I build AI solutions for management processes across a nuclear business unit at INVAP. <strong>Nine systems shipped</strong> by directing AI agents as the development engine. The bottleneck was never the model — it is defining the problem.</p>
       <div class="hero-cta">
         <a href="#projects" class="btn-primary">See my work ↓</a>
-        <a href="Javier_Martinez_CV_r03_AI.pdf" download class="btn-ghost">Download CV</a>
+        <a href="Javier_Alejandro_Martinez_CV_AI_Product_Manager.pdf" download class="btn-ghost">Download CV</a>
         <a href="https://linkedin.com/in/javiermartinez-pm" target="_blank" class="btn-ghost">LinkedIn →</a>
       </div>
     </div>
@@ -194,23 +194,30 @@
         <div class="toc-meta">Metamorfosis Origen · Distributed via APK</div>
       </div>
     </a>
+    <a class="toc-item" href="#p-rag-coach">
+      <span class="toc-num">04</span>
+      <div>
+        <div class="toc-title">RAG Coaching Assistant</div>
+        <div class="toc-meta">Metamorfosis Origen &#183; In progress</div>
+      </div>
+    </a>
     <div class="toc-group">Process &amp; Standards</div>
     <a class="toc-item" href="#p-a3">
-      <span class="toc-num">04</span>
+      <span class="toc-num">05</span>
       <div>
         <div class="toc-title">A3 Process Management App</div>
         <div class="toc-meta">INVAP · Internal pilot</div>
       </div>
     </a>
     <a class="toc-item" href="#p-5s">
-      <span class="toc-num">05</span>
+      <span class="toc-num">06</span>
       <div>
         <div class="toc-title">5S Lean Management Platform</div>
         <div class="toc-meta">INVAP · Leading development</div>
       </div>
     </a>
     <a class="toc-item" href="#p-gerencia">
-      <span class="toc-num">06</span>
+      <span class="toc-num">07</span>
       <div>
         <div class="toc-title">Engineering &amp; Production Management</div>
         <div class="toc-meta">INVAP · Leading development</div>
@@ -218,7 +225,7 @@
     </a>
     <div class="toc-group">Engineering Platform</div>
     <a class="toc-item" href="#p-template">
-      <span class="toc-num">07</span>
+      <span class="toc-num">08</span>
       <div>
         <div class="toc-title">Apps Project Template</div>
         <div class="toc-meta">INVAP · Starter template &amp; method</div>
@@ -263,7 +270,7 @@
         <div class="project-title">WhatsApp Lead Re-engagement System</div>
         <span class="project-badge">Live in production</span>
       </div>
-      <p class="project-desc">Automated lead nurturing over WhatsApp Business API. Handles <strong>75+ leads automatically</strong>, sends personalized messages at different funnel stages, and rotates sender numbers to avoid platform bans — a critical constraint in high-volume messaging.</p>
+      <p class="project-desc">Automated lead nurturing over WhatsApp Business API. Handles <strong>75+ leads automatically</strong>, sends personalized messages at different funnel stages, and paces delivery across sender numbers to stay within platform limits — deliverability and sender reputation are the real constraint in scheduled messaging, not the sending itself.</p>
       <div class="project-metrics">
         <div class="metric"><div class="metric-value">75+</div><div class="metric-label">Leads handled automatically</div></div>
         <div class="metric"><div class="metric-value">0</div><div class="metric-label">Manual messages per campaign</div></div>
@@ -288,6 +295,34 @@
       <p class="project-desc">Native Android application using WebView architecture with real native features: <strong>push notifications, persistent login session</strong>, and navigation enhancements. Distributed directly to trusted users via APK for early-access distribution.</p>
       <div class="project-stack">
         <span class="stack-tag">Android</span><span class="stack-tag">WebView</span><span class="stack-tag">Push Notifications</span><span class="stack-tag">Google Antigravity</span><span class="stack-tag">Claude</span>
+      </div>
+    </div>
+
+    <div class="project-card" id="p-rag-coach">
+      <div class="project-header">
+        <div class="project-title">RAG Coaching Assistant — Metamorfosis Origen</div>
+        <span class="project-badge">In progress</span>
+      </div>
+      <p class="project-desc">A conversational assistant built on <strong>retrieval-augmented generation</strong> over a private corpus, running <strong>100% on local infrastructure</strong> — the language model, the embeddings and the vector database all live on the machine, so no user data ever leaves it. Built as a <strong>LangGraph</strong> state graph with a four-level architecture whose import rules are enforced automatically. The part I care about most is not the model: it is the <strong>nine deterministic test suites</strong> that check safety, output filtering, register and retrieval behaviour in milliseconds and <strong>without a single LLM call</strong>. A RAG system always looks like it works — the only way to know is to measure it.</p>
+      <div class="project-metrics">
+        <div class="metric"><div class="metric-value">2,585</div><div class="metric-label">Chunks indexed from 185 sources</div></div>
+        <div class="metric"><div class="metric-value">100%</div><div class="metric-label">Local inference — no data leaves the machine</div></div>
+        <div class="metric"><div class="metric-value">262</div><div class="metric-label">Deterministic test cases, zero LLM calls</div></div>
+      </div>
+      <div class="project-stack">
+        <span class="stack-tag">Python</span><span class="stack-tag">LangGraph</span><span class="stack-tag">Ollama</span><span class="stack-tag">Llama 3.1</span><span class="stack-tag">ChromaDB</span><span class="stack-tag">Sentence Transformers</span><span class="stack-tag">SQLite</span><span class="stack-tag">Streamlit</span><span class="stack-tag">Claude</span>
+      </div>
+      <div class="diagrams-grid">
+        <div class="diagram-item">
+          <div class="diagram-label">System Architecture</div>
+          <img src="rag-coach-arquitectura.svg" alt="RAG coaching assistant architecture: four layers with dependencies pointing down only, fully local inference, and nine deterministic test suites" class="diagram-img" loading="lazy">
+          <p class="diagram-caption">Four layers, and the arrows only ever point down &#8212; a rule enforced by a check that reads the real import graph, not by discipline. The panel on the right is the part I care about: 262 test cases that need no model to run, so they run before the ones that do.</p>
+        </div>
+        <div class="diagram-item">
+          <div class="diagram-label">Anatomy of a Turn</div>
+          <img src="rag-coach-flujo.svg" alt="How one conversational turn is processed: safety gate before retrieval, retrieval with per-source cap, prompt assembly, local generation, deterministic output verification, and session persistence" class="diagram-img" loading="lazy">
+          <p class="diagram-caption">Two things here are deliberate. The safety check runs <strong>before</strong> retrieval and before the model, so it never depends on the model following an instruction. And a source is named only when the answer actually leaned on it &#8212; retrieval always returns something, because similarity has no notion of &#8220;useful&#8221;.</p>
+        </div>
       </div>
     </div>
 
@@ -427,13 +462,14 @@
     <div class="about-text">
       <p>I spent over a decade managing <strong>mission-critical programs</strong> at INVAP — satellite simulators, radar systems, software validation for space missions. The kind of work where ambiguity is expensive and decisions have long tails.</p>
       <p>A few years ago I started building digital products on the side. First a platform, then automations, then full applications. What changed everything was learning to work with <strong>AI agents as development tools</strong> — not to replace thinking, but to move faster without losing rigor.</p>
-      <p>That combination — deep technical PM experience plus hands-on AI-assisted building — is what I'm bringing to my next role.</p>
+      <p>Today that runs at a different scale: I build AI solutions for management processes — suppliers, workforce planning, budgeting — across a nuclear business unit at INVAP, working directly with the department heads who own them.</p>
+      <p>The pattern is always the same: a process someone is doing by hand, and a system that does it instead. That combination — deep technical PM experience plus hands-on AI-assisted building — is what I'm bringing to my next role.</p>
     </div>
     <div class="about-facts">
       <div class="fact"><div class="fact-label">Based in</div><div class="fact-value">San Luis, Argentina — open to remote &amp; relocation</div></div>
-      <div class="fact"><div class="fact-label">Experience</div><div class="fact-value">11+ years across aerospace, automation &amp; digital products</div></div>
+      <div class="fact"><div class="fact-label">Experience</div><div class="fact-value">11 years — space, radar, nuclear, manufacturing, energy</div></div>
       <div class="fact"><div class="fact-label">EU Authorization</div><div class="fact-value">Spanish citizenship in process — expected 2026</div></div>
-      <div class="fact"><div class="fact-label">Core stack</div><div class="fact-value">Claude · Antigravity · n8n · React · Node.js · Docker</div></div>
+      <div class="fact"><div class="fact-label">Core stack</div><div class="fact-value">Claude · Antigravity · n8n · LangGraph · React · Node.js · Docker</div></div>
       <div class="fact"><div class="fact-label">Languages</div><div class="fact-value">Spanish (native) · English (professional) · French (basic)</div></div>
     </div>
   </div>

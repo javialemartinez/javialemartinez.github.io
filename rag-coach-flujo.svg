@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" width="1600" height="1000" role="img" aria-label="RAG Coaching Assistant - anatomy of a single conversational turn">
+<defs>
+<style>
+  text{font-family:'Segoe UI',system-ui,-apple-system,Inter,Helvetica,Arial,sans-serif}
+  .t1{fill:#FFFFFF;font-size:40px;font-weight:700}
+  .t2{fill:#8A93A8;font-size:19px}
+  .sec{fill:#5D6780;font-size:15px;font-weight:600;letter-spacing:2.5px}
+  .tag{font-size:12px;font-weight:700;letter-spacing:1.6px}
+  .nt{fill:#FFFFFF;font-size:19px;font-weight:600}
+  .nd{fill:#98A2B8;font-size:13.5px}
+  .pl{fill:#C7CEDC;font-size:14px}
+  .ft{fill:#5D6780;font-size:14px}
+  .step{fill:#3E4860;font-size:34px;font-weight:700}
+</style>
+<marker id="ag" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+  <path d="M0,0 L10,4 L0,8 Z" fill="#5A6580"/>
+</marker>
+<marker id="ar" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+  <path d="M0,0 L10,4 L0,8 Z" fill="#F87171"/>
+</marker>
+</defs>
+
+<rect width="1600" height="1000" fill="#0A0E1A"/>
+
+<text class="t1" x="800" y="66" text-anchor="middle">RAG Coaching Assistant &#8212; Anatomy of a Turn</text>
+<text class="t2" x="800" y="104" text-anchor="middle">Safety before retrieval &#183; Grounding verified, not assumed &#183; Every step on local hardware</text>
+<line x1="80" y1="140" x2="1520" y2="140" stroke="#1E2740" stroke-width="1"/>
+
+<!-- ROW 1 -->
+<text class="sec" x="80" y="184">ONE MESSAGE IN</text>
+
+<rect x="80" y="206" width="330" height="132" rx="14" fill="#0F1526" stroke="#2A3450" stroke-width="1.5"/>
+<text class="step" x="382" y="248" text-anchor="end">1</text>
+<text class="tag" x="108" y="240" fill="#8A93A8">INPUT</text>
+<text class="nt" x="108" y="276">A message arrives</text>
+<text class="nd" x="108" y="302">The channel is irrelevant to the core:</text>
+<text class="nd" x="108" y="322">web, console or messaging all call the same entry point.</text>
+
+<rect x="446" y="206" width="330" height="132" rx="14" fill="#2A1113" stroke="#F87171" stroke-width="1.5"/>
+<text class="step" x="748" y="248" text-anchor="end">2</text>
+<text class="tag" x="474" y="240" fill="#F87171">SAFETY GATE</text>
+<text class="nt" x="474" y="276">Five-level risk check</text>
+<text class="nd" x="474" y="302">Deterministic, and it runs <tspan font-weight="700">before</tspan> retrieval</text>
+<text class="nd" x="474" y="322">and before the model is called at all.</text>
+
+<rect x="812" y="206" width="330" height="132" rx="14" fill="#0C2029" stroke="#22D3EE" stroke-width="1.5"/>
+<text class="step" x="1114" y="248" text-anchor="end">3</text>
+<text class="tag" x="840" y="240" fill="#22D3EE">RETRIEVE</text>
+<text class="nt" x="840" y="276">Embed and search</text>
+<text class="nd" x="840" y="302">The question becomes a vector; the closest</text>
+<text class="nd" x="840" y="322">passages come back from the local index.</text>
+
+<rect x="1178" y="206" width="342" height="132" rx="14" fill="#0C2029" stroke="#22D3EE" stroke-width="1.5"/>
+<text class="step" x="1492" y="248" text-anchor="end">4</text>
+<text class="tag" x="1206" y="240" fill="#22D3EE">RE-RANK &#38; CAP</text>
+<text class="nt" x="1206" y="276">Reorder, then limit per source</text>
+<text class="nd" x="1206" y="302">At most two passages from any one source,</text>
+<text class="nd" x="1206" y="322">so a talkative source cannot crowd out the rest.</text>
+
+<path d="M410,272 L440,272" stroke="#5A6580" stroke-width="2" marker-end="url(#ag)"/>
+<path d="M776,272 L806,272" stroke="#5A6580" stroke-width="2" marker-end="url(#ag)"/>
+<path d="M1142,272 L1172,272" stroke="#5A6580" stroke-width="2" marker-end="url(#ag)"/>
+
+<!-- safety exit -->
+<path d="M611,338 L611,376" stroke="#F87171" stroke-width="2" stroke-dasharray="5,5" marker-end="url(#ar)"/>
+<rect x="446" y="380" width="330" height="74" rx="12" fill="#1A0C0D" stroke="#7F2D2D" stroke-width="1.2"/>
+<text class="nd" x="474" y="410" fill="#F0A8A8">Real risk short-circuits the turn: no retrieval,</text>
+<text class="nd" x="474" y="432" fill="#F0A8A8">no generation, a flag raised for a human.</text>
+
+<!-- ROW 2 -->
+<text class="sec" x="80" y="512">ONE ANSWER OUT</text>
+
+<rect x="80" y="534" width="330" height="150" rx="14" fill="#101C2E" stroke="#818CF8" stroke-width="1.5"/>
+<text class="step" x="382" y="576" text-anchor="end">5</text>
+<text class="tag" x="108" y="568" fill="#818CF8">ASSEMBLE</text>
+<text class="nt" x="108" y="604">Build the prompt</text>
+<text class="nd" x="108" y="630">Passages, session history, the stage the</text>
+<text class="nd" x="108" y="650">conversation is in, and one explicit rule:</text>
+<text class="nd" x="108" y="670">ignore the context if it does not apply.</text>
+
+<rect x="446" y="534" width="330" height="150" rx="14" fill="#101C2E" stroke="#818CF8" stroke-width="1.5"/>
+<text class="step" x="748" y="576" text-anchor="end">6</text>
+<text class="tag" x="474" y="568" fill="#818CF8">GENERATE</text>
+<text class="nt" x="474" y="604">Local model, no network</text>
+<text class="nd" x="474" y="630">The answer is written on the same machine</text>
+<text class="nd" x="474" y="650">that holds the index. Nothing is sent out,</text>
+<text class="nd" x="474" y="670">so there is nothing to leak.</text>
+
+<rect x="812" y="534" width="330" height="150" rx="14" fill="#241B06" stroke="#F59E0B" stroke-width="1.5"/>
+<text class="step" x="1114" y="576" text-anchor="end">7</text>
+<text class="tag" x="840" y="568" fill="#F59E0B">VERIFY OUTPUT</text>
+<text class="nt" x="840" y="604">Check before it is shown</text>
+<text class="nd" x="840" y="630">A deterministic filter runs on the generated</text>
+<text class="nd" x="840" y="650">text. The model is not trusted to have</text>
+<text class="nd" x="840" y="670">followed its own instructions.</text>
+
+<rect x="1178" y="534" width="342" height="150" rx="14" fill="#07231A" stroke="#34D399" stroke-width="1.5"/>
+<text class="step" x="1492" y="576" text-anchor="end">8</text>
+<text class="tag" x="1206" y="568" fill="#34D399">RESPOND &#38; REMEMBER</text>
+<text class="nt" x="1206" y="604">Answer, then persist</text>
+<text class="nd" x="1206" y="630">The session state is written down, so the</text>
+<text class="nd" x="1206" y="650">conversation can pause and pick up later</text>
+<text class="nd" x="1206" y="670">exactly where it stopped.</text>
+
+<path d="M410,600 L440,600" stroke="#5A6580" stroke-width="2" marker-end="url(#ag)"/>
+<path d="M776,600 L806,600" stroke="#5A6580" stroke-width="2" marker-end="url(#ag)"/>
+<path d="M1142,600 L1172,600" stroke="#5A6580" stroke-width="2" marker-end="url(#ag)"/>
+<path d="M1490,338 L1550,338 L1550,468 L48,468 L48,600 L74,600" stroke="#2A3450" stroke-width="2" fill="none" marker-end="url(#ag)"/>
+
+<!-- THE GROUNDING RULE -->
+<rect x="80" y="726" width="700" height="150" rx="14" fill="#0F1526" stroke="#2A3450" stroke-width="1.5"/>
+<text class="tag" x="112" y="758" fill="#8A93A8">THE RULE THAT MATTERS</text>
+<text class="nt" x="112" y="794">A source is named only when it was actually used</text>
+<text class="nd" x="112" y="822">Retrieval always returns something &#8212; similarity has no notion of</text>
+<text class="nd" x="112" y="844">&#8220;useful&#8221;. So the model marks whether it leaned on the passages,</text>
+<text class="nd" x="112" y="866">and the answer cites a source only when that mark says it did.</text>
+
+<rect x="812" y="726" width="708" height="150" rx="14" fill="#0F1526" stroke="#2A3450" stroke-width="1.5"/>
+<text class="tag" x="844" y="758" fill="#8A93A8">A GUIDED SESSION, NOT A Q&#38;A</text>
+<text class="nt" x="844" y="794">The conversation moves through defined stages</text>
+<text class="nd" x="844" y="822">It is not a question-and-answer box. The graph tracks which stage the</text>
+<text class="nd" x="844" y="844">session is in and what still has to happen before it can close &#8212; and a</text>
+<text class="nd" x="844" y="866">closed session leaves a note for the human coach behind it.</text>
+
+<line x1="80" y1="916" x2="1520" y2="916" stroke="#1E2740" stroke-width="1"/>
+<text class="ft" x="80" y="948">Every step above runs on local hardware &#8212; model, embeddings and index</text>
+<text class="ft" x="1520" y="948" text-anchor="end">Metamorfosis Origen &#183; in progress</text>
+</svg>

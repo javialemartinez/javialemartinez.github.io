@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" width="1600" height="1000" role="img" aria-label="RAG Coaching Assistant - Local-first layered architecture">
+<defs>
+<style>
+  text{font-family:'Segoe UI',system-ui,-apple-system,Inter,Helvetica,Arial,sans-serif}
+  .t1{fill:#FFFFFF;font-size:40px;font-weight:700}
+  .t2{fill:#8A93A8;font-size:19px}
+  .sec{fill:#5D6780;font-size:15px;font-weight:600;letter-spacing:2.5px}
+  .tag{font-size:12px;font-weight:700;letter-spacing:1.6px}
+  .nt{fill:#FFFFFF;font-size:21px;font-weight:600}
+  .nd{fill:#98A2B8;font-size:14px}
+  .pl{fill:#C7CEDC;font-size:14px}
+  .ft{fill:#5D6780;font-size:14px}
+  .num{fill:#FFFFFF;font-size:30px;font-weight:700}
+  .lvl{fill:#5D6780;font-size:13px;font-weight:700;letter-spacing:1.4px}
+</style>
+<marker id="ag" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+  <path d="M0,0 L10,4 L0,8 Z" fill="#5A6580"/>
+</marker>
+</defs>
+
+<rect width="1600" height="1000" fill="#0A0E1A"/>
+
+<text class="t1" x="800" y="66" text-anchor="middle">RAG Coaching Assistant &#8212; Architecture</text>
+<text class="t2" x="800" y="104" text-anchor="middle">Local-first inference &#183; Four layers, one direction &#183; Verified without a single LLM call</text>
+<line x1="80" y1="140" x2="1520" y2="140" stroke="#1E2740" stroke-width="1"/>
+
+<text class="sec" x="80" y="184">LAYERED CORE &#8212; DEPENDENCIES POINT DOWN ONLY</text>
+
+<!-- LEVEL 4 -->
+<text class="lvl" x="80" y="240">LEVEL 4</text>
+<rect x="190" y="208" width="860" height="94" rx="14" fill="#0C2029" stroke="#22D3EE" stroke-width="1.5"/>
+<text class="tag" x="220" y="240" fill="#22D3EE">ENTRY POINTS</text>
+<text class="nt" x="220" y="270">Web UI &#183; console &#183; ingestion &#183; coach notifications</text>
+<text class="nd" x="220" y="292">Each one picks a channel. Nothing below them is allowed to.</text>
+
+<!-- LEVEL 3 -->
+<text class="lvl" x="80" y="358">LEVEL 3</text>
+<rect x="190" y="326" width="860" height="94" rx="14" fill="#101C2E" stroke="#818CF8" stroke-width="1.5"/>
+<text class="tag" x="220" y="358" fill="#818CF8">ORCHESTRATORS</text>
+<text class="nt" x="220" y="388">Conversation graph (LangGraph) &#183; ingestion pipeline</text>
+<text class="nd" x="220" y="410">A state graph, not a chain: a session can branch, pause and resume.</text>
+
+<!-- LEVEL 2 -->
+<text class="lvl" x="80" y="476">LEVEL 2</text>
+<rect x="190" y="444" width="860" height="150" rx="14" fill="#0F1526" stroke="#2A3450" stroke-width="1.5"/>
+<text class="tag" x="220" y="476" fill="#8A93A8">INTERCHANGEABLE PIECES</text>
+<text class="pl" x="220" y="512">retrieval &#183; re-ranking &#183; chunking &#183; loaders &#183; manifest</text>
+<text class="pl" x="220" y="540">prompts &#183; model client &#183; safety &#183; output verification</text>
+<text class="pl" x="220" y="562">session store &#183; reference index &#183; business rules</text>
+<text class="nd" x="220" y="586">Siblings never import each other &#8212; swap one, the rest stay untouched.</text>
+
+<!-- LEVEL 1 -->
+<text class="lvl" x="80" y="650">LEVEL 1</text>
+<rect x="190" y="618" width="860" height="94" rx="14" fill="#07231A" stroke="#34D399" stroke-width="1.5"/>
+<text class="tag" x="220" y="650" fill="#34D399">FOUNDATION</text>
+<text class="nt" x="220" y="676">Configuration &#8212; imports nothing from the project</text>
+<text class="nd" x="220" y="698">The floor. Everything else can stand on it.</text>
+
+<path d="M620,302 L620,322" stroke="#5A6580" stroke-width="2" marker-end="url(#ag)"/>
+<path d="M620,420 L620,440" stroke="#5A6580" stroke-width="2" marker-end="url(#ag)"/>
+<path d="M620,594 L620,614" stroke="#5A6580" stroke-width="2" marker-end="url(#ag)"/>
+
+<!-- RIGHT: LOCAL -->
+<rect x="1140" y="208" width="380" height="186" rx="14" fill="#07231A" stroke="#34D399" stroke-width="1.5"/>
+<text class="tag" x="1170" y="240" fill="#34D399">100% LOCAL</text>
+<text class="nt" x="1170" y="276">No data leaves the machine</text>
+<text class="pl" x="1170" y="310">&#8226;&#160; Language model runs on the host</text>
+<text class="pl" x="1170" y="338">&#8226;&#160; Embeddings computed locally</text>
+<text class="pl" x="1170" y="366">&#8226;&#160; Vector database on local disk</text>
+
+<!-- RIGHT: MEASURED -->
+<rect x="1140" y="418" width="380" height="280" rx="14" fill="#241B06" stroke="#F59E0B" stroke-width="1.5"/>
+<text class="tag" x="1170" y="450" fill="#F59E0B">MEASURED, NOT ASSUMED</text>
+<text class="num" x="1170" y="500">262</text>
+<text class="nd" x="1170" y="526">deterministic test cases across nine</text>
+<text class="nd" x="1170" y="548">suites &#8212; safety, output filtering,</text>
+<text class="nd" x="1170" y="570">register, retrieval, architecture</text>
+<text class="num" x="1170" y="620">0</text>
+<text class="nd" x="1170" y="646">LLM calls to run them. They finish</text>
+<text class="nd" x="1170" y="668">in milliseconds, so they run first.</text>
+
+<!-- BOTTOM: the point -->
+<rect x="80" y="746" width="1440" height="122" rx="14" fill="#0F1526" stroke="#2A3450" stroke-width="1.5"/>
+<text class="tag" x="112" y="778" fill="#8A93A8">WHY IT IS BUILT THIS WAY</text>
+<text class="nt" x="112" y="816">A RAG system always looks like it works.</text>
+<text class="nd" x="112" y="844">Ask it anything and a well-written answer comes back. You can spend months improving it by feel and never know whether you moved</text>
+<text class="nd" x="112" y="866">forwards or backwards. That is why every parameter here has a measurement behind it, and why the checks that need no model run first.</text>
+
+<line x1="80" y1="906" x2="1520" y2="906" stroke="#1E2740" stroke-width="1"/>
+<text class="ft" x="80" y="938">Python &#183; LangGraph &#183; local LLM runtime &#183; ChromaDB &#183; sentence-transformers &#183; SQLite &#183; Streamlit</text>
+<text class="ft" x="1520" y="938" text-anchor="end">Metamorfosis Origen &#183; in progress</text>
+</svg>
