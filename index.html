@@ -127,6 +127,13 @@
   .lightbox img { max-width: 95vw; max-height: 90vh; border-radius: 8px; object-fit: contain; }
   .lightbox-close { position: fixed; top: 20px; right: 28px; font-size: 32px; color: white; cursor: pointer; line-height: 1; opacity: 0.7; }
   .lightbox-close:hover { opacity: 1; }
+
+  #intro-video { text-align: center; }
+  #intro-video .section-label { justify-content: center; }
+  #intro-video h2 { margin-bottom: 12px; }
+  #intro-video .intro-sub { color: var(--text-mid); font-size: 15px; max-width: 480px; margin: 0 auto 36px; }
+  .video-wrap { width: 300px; max-width: 100%; margin: 0 auto; border-radius: 20px; overflow: hidden; border: 1px solid var(--border); box-shadow: 0 0 40px rgba(29,158,117,0.15); background: #000; }
+  .video-wrap video { display: block; width: 100%; aspect-ratio: 9 / 16; object-fit: cover; background: #000; }
 </style>
 </head>
 <body>
@@ -164,6 +171,20 @@
     </div>
   </div>
 </div>
+
+<div class="section-divider"></div>
+
+<section id="intro-video">
+  <div class="section-label">Say Hello</div>
+  <h2>A short introduction, in my own words</h2>
+  <p class="intro-sub">A quick video walkthrough of who I am and what I build — in English.</p>
+  <div class="video-wrap">
+    <video controls playsinline preload="metadata" poster="intro-poster.jpg">
+      <source src="intro.mp4" type="video/mp4">
+      Your browser doesn't support embedded video. <a href="intro.mp4">Download it instead</a>.
+    </video>
+  </div>
+</section>
 
 <div class="section-divider"></div>
 
