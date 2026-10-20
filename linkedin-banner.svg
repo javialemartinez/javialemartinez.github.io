@@ -206,8 +206,8 @@
 <rect x="1540" y="66" width="3" height="264" rx="1.5" fill="#2FD3A0" opacity="0.9"/>
 
 <text class="nombre" x="1500" y="118" text-anchor="end">JAVIER ALEJANDRO MARTINEZ</text>
-<text class="rol" x="1500" y="160" text-anchor="end">AI PRODUCT MANAGER &#160;&#183;&#160; TECHNICAL PM</text>
-<line x1="860" y1="188" x2="1500" y2="188" stroke="#2FD3A0" stroke-width="1.1" opacity="0.42"/>
+<text class="rol" x="1500" y="160" text-anchor="end">AI PRODUCT MANAGER &#160;&#183;&#160; TECHNICAL PM &#160;&#183;&#160; AI OPERATIONS</text>
+<line x1="700" y1="188" x2="1500" y2="188" stroke="#2FD3A0" stroke-width="1.1" opacity="0.42"/>
 <text class="tesis" x="1500" y="240" text-anchor="end">I turn manual management processes into AI systems</text>
 <text class="cred" x="1500" y="282" text-anchor="end">11 years in high-consequence engineering &#8212; space &#183; defense &#183; nuclear</text>
 </svg>
